@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.org/laurentzziu/permitted_attributes.svg?branch=master)](https://travis-ci.org/laurentzziu/permitted_attributes)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/d44641b8ac2d7a6f33e6/test_coverage)](https://codeclimate.com/github/laurentzziu/permitted_attributes/test_coverage)
-
 # PermittedAttributes
 
 Gem to easily generate permitted attributes for ActiveController::StrongParameters
