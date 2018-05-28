@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/permitted_attributes.svg)](https://badge.fury.io/rb/permitted_attributes)
 [![Build Status](https://travis-ci.org/laurentzziu/permitted_attributes.svg?branch=master)](https://travis-ci.org/laurentzziu/permitted_attributes)
 
 # PermittedAttributes
