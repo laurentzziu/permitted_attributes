@@ -1,5 +1,5 @@
 require "permitted_attributes/version"
+require "permitted_attributes/permitted_attributes"
 
-module PermittedAttributes
-  # Your code goes here...
-end
+module PermittedAttributes; end
+
