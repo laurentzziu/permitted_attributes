@@ -26,8 +26,8 @@ Include `PermittedAttributes` module in the `ApplicationRecord` class.
 ```ruby
 # app/models/application_record.rb
 class ApplicationRecord < ActiveRecord::Base
-	include PermittedAttributes
-	...
+  include PermittedAttributes
+  ...
 end
 ```
 
@@ -39,16 +39,16 @@ Example:
 ```ruby
 # app/models/post.rb
 class Post < ApplicationRecord
-	excluded_attributes :title, :category_id
-	...
+  excluded_attributes :title, :category_id
+  ...
 end
 ```
 
 ```ruby
 # app/models/category.rb
 class Category < ApplicationRecord
-	excluded_attributes :user_id, skip_defaults: true
-	...
+  excluded_attributes :user_id, skip_defaults: true
+  ...
 end
 ```
 
@@ -62,7 +62,7 @@ Use the method in your controller:
 
 ```ruby
 def post_params
-	params.require(:post).permit(**Post.permitted_attributes, category_attributes: [*Category.permitted_attributes])
+  params.require(:post).permit(**Post.permitted_attributes, category_attributes: [*Category.permitted_attributes])
 end
 ```
 
