@@ -2,7 +2,7 @@
 
 # PermittedAttributes
 
-Gem to easily generate permitted attributes for ActiveController::StrongParameters
+Gem to easily generate permitted attributes for `ActiveController::StrongParameters`
 
 ## Installation
 
@@ -21,12 +21,49 @@ Or install it yourself as:
     $ gem install permitted_attributes
 
 ## Usage
+Include `PermittedAttributes` module in the `ApplicationRecord` class.
 
 ```ruby
-	class ApplicationRecord
-		include PermittedAttributes
-		...
-	end
+# app/models/application_record.rb
+class ApplicationRecord < ActiveRecord::Base
+	include PermittedAttributes
+	...
+end
+```
+
+To exclude attributes per model, add
+`excluded_attributes :name, :title` to your model.
+
+Example:
+
+```ruby
+# app/models/post.rb
+class Post < ApplicationRecord
+	excluded_attributes :title, :category_id
+	...
+end
+```
+
+```ruby
+# app/models/category.rb
+class Category < ApplicationRecord
+	excluded_attributes :user_id, skip_defaults: true
+	...
+end
+```
+
+Options:
+
+* `skip_defaults`: _boolean_, default: `false`
+
+Set to `true` in order to skip the default excluded attributes: `id`, `created_at`, `updated_at`.
+
+Use the method in your controller:
+
+```ruby
+def post_params
+	params.require(:post).permit(**Post.permitted_attributes, category_attributes: [*Category.permitted_attributes])
+end
 ```
 
 ## Development
