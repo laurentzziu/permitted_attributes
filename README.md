@@ -5,6 +5,12 @@
 
 Gem to easily generate permitted attributes for `ActiveController::StrongParameters`
 
+## Description
+
+This gem adds the `permitted_attributes` class method, which returns all the model's column names as an `Array` of `symbols`, except the ones excluded (either by default: `id`, `created_at`, `updated_at`, or specified by user using the `excluded_attributes` method).
+
+It uses the [`column_names`](http://api.rubyonrails.org/classes/ActiveRecord/ModelSchema/ClassMethods.html#method-i-column_names) `ActiveRecord` method to retrieve all the database column names.
+
 ## Installation
 
 Add this line to your application's Gemfile:
