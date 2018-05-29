@@ -69,7 +69,7 @@ Use the method in your controller:
 
 ```ruby
 def post_params
-  params.require(:post).permit(**Post.permitted_attributes, category_attributes: [*Category.permitted_attributes])
+  params.require(:post).permit(*Post.permitted_attributes, category_attributes: [*Category.permitted_attributes])
 end
 ```
 
