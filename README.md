@@ -1,5 +1,7 @@
 [![Gem Version](https://badge.fury.io/rb/permitted_attributes.svg)](https://badge.fury.io/rb/permitted_attributes)
 [![Build Status](https://travis-ci.org/laurentzziu/permitted_attributes.svg?branch=master)](https://travis-ci.org/laurentzziu/permitted_attributes)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d44641b8ac2d7a6f33e6/maintainability)](https://codeclimate.com/github/laurentzziu/permitted_attributes/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d44641b8ac2d7a6f33e6/test_coverage)](https://codeclimate.com/github/laurentzziu/permitted_attributes/test_coverage)
 
 # PermittedAttributes
 
